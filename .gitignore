@@ -4,7 +4,6 @@ proofs
 broadcast
 .env
 plonk_vk.sol
-circuits/target/*
 web/node_modules
 .DS_Store
 web/dist

@@ -1,5 +1,4 @@
 import { UltraHonkBackend } from "@aztec/bb.js";
-import fs from "fs";
 import circuit from "../circuits/target/noir_uh_starter.json";
 import { Noir } from "@noir-lang/noir_js";
 
@@ -15,7 +14,7 @@ async function generateProof() {
         log('Generating proof...');
 
         const noir = new Noir(circuit);
-        const honk = new UltraHonkBackend(circuit.bytecode);
+        const honk = new UltraHonkBackend(circuit.bytecode, { threads: 8 });
 
         const inputs = { x: 3, y: 3 }
         const { witness } = await noir.execute(inputs);

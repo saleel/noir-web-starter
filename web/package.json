@@ -1,13 +1,16 @@
 {
   "name": "js",
   "dependencies": {
-    "@aztec/bb.js": "^0.75.0",
+    "@aztec/bb.js": "0.75.0",
     "@noir-lang/noir_js": "1.0.0-beta.1"
   },
   "scripts": {
-    "dev": "webpack serve",
-    "build": "NODE_ENV=production webpack",
-    "preview": "webpack serve --mode production"
+    "webpack:dev": "webpack serve",
+    "webpack:build": "NODE_ENV=production webpack",
+    "webpack:preview": "webpack serve --mode production",
+    "vite:dev": "vite",
+    "vite:build": "vite build",
+    "vite:serve": "vite serve"
   },
   "devDependencies": {
     "@babel/core": "^7.26.7",
@@ -17,6 +20,7 @@
     "html-webpack-plugin": "^5.6.3",
     "ts-node": "^10.9.2",
     "typescript": "^5.7.2",
+    "vite": "^6.1.0",
     "webpack": "^5.97.1",
     "webpack-cli": "^6.0.1",
     "webpack-dev-server": "^5.2.0"

@@ -38,14 +38,11 @@ module.exports = {
       directory: path.join(__dirname, 'dist'),
     },
     compress: true,
-    port: 5173, // Using the same port as Vite for consistency
+    port: 3000,
     hot: true,
-  },
-  resolve: {
-    fallback: {
-      "fs": false,
-      "path": false,
-      "crypto": false
+    headers: {
+      "Cross-Origin-Embedder-Policy": "require-corp",
+      "Cross-Origin-Opener-Policy": "same-origin"
     }
   }
 }; 
